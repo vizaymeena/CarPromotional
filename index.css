@@ -15,13 +15,23 @@
     z-index: 0;
 
 }
+.title{
+    padding: 10px 0px;
+    color: blue;
+    font-size: 20px;
+    text-align: center;
+    font-family: karla;
+}
 .redRoad{
+    background-color: red;
+    height: 10vh;
+    width: 100%;
     position: absolute;
     top: 8vh;
     left: 0;
     z-index: -1;
 }
-.navDiv ul li a{
+.anchors{
     font-family: "Karla", sans-serif;
     text-decoration: none;
     font-size: 18px;

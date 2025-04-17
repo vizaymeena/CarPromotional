@@ -1,0 +1,29 @@
+1. Uncaught TypeError: Cannot read properties of undefined (reading 'Login')
+
+Sol = error occured because the script is loading before than the dom , So wrapping up the code inside the DOMContentLoaded fixes it
+
+script = window.addEventListener('DOMContentLoaded', () => { //block of code })
+
+-------------------------------------------------------------------------------------------------------------------
+
+2.Uncaught TypeError: Failed to execute 'appendChild' on 'Node': parameter 1 is not of type 'Node'.
+
+Sol = div.classList.add('redRoad') does not return a DOM node 
+    = it returns undefined (that's how classList.add works). So you're basically running:
+
+wrong script = nav.appendChild(undefined)
+
+right script = 
+                const nav = document.createElement('nav');
+                const redDiv = document.createElement('div');
+                redDiv.classList.add('redRoad');
+                nav.appendChild(redDiv);
+                document.body.appendChild(nav);
+
+or use : 
+
+nav.appendChild(Object.assign(document.createElement('div'), {
+  className: 'redRoad'
+}));
+
+-------------------------------------------------------------------------------------------------------------------

@@ -1,0 +1,4 @@
+1. cloneNode(false) : copies element itself                     // shallow copy
+2. cloneNode(True) : copies element and its childer too        // Deep copy
+3. .appendChild(object.assign())
+4. removeAttribute()
