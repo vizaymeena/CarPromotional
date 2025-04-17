@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Charm:wght@400;700&family=Combo&family=Crafty+Girls&family=Festive&family=Gruppo&family=Karla:ital,wght@0,200..800;1,200..800&family=Merienda:wght@300..900&family=Monsieur+La+Doulaise&family=Nothing+You+Could+Do&family=Plaster&family=Playwrite+VN:wght@100..400&family=Radley:ital@0;1&family=Tangerine:wght@400;700&family=Tektur:wght@400..900&display=swap');
+
+
+.nav{
+    width: 100%;
+    height: 10vh;
+    background-color: black;
+    position: relative;
+    z-index: 0;
+
+}
+.redRoad{
+    position: absolute;
+    top: 8vh;
+    left: 0;
+    z-index: -1;
+}
+.navDiv ul li a{
+    font-family: "Karla", sans-serif;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: black;
+}
+.navLinks{
+    display: flex;
+    width: 600px;
+    height: 10vh;
+    padding: 10px 15px;
+    border-radius: 20px 0px 20px 0px;
+    margin: 0 auto;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
