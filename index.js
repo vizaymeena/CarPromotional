@@ -1,5 +1,5 @@
 
-/* 1. Navbar Starts */
+/* 1. navbar starts */
 
 window.addEventListener('DOMContentLoaded', () => {
     const nav = document.createElement('nav');
@@ -43,4 +43,46 @@ window.addEventListener('DOMContentLoaded', () => {
   });
   
 
-// Navbar Ends
+// navbar ends
+
+
+/* 2. flex section starts*/
+
+
+window.addEventListener('DOMContentLoaded',()=>{
+
+const products = [
+  {  'title':'Jaguar','about':'hehehe','price':50000, 'img': "Images/car2.webp"},
+  {  'title':'Jaguar','about':'hehehe','price':50000, 'img': "Images/car3.webp"},
+  {  'title':'Jaguar','about':'hehehe','price':50000, 'img': "Images/car7.webp"},
+
+  {  'title':'Jaguar','about':'hehehe','price':50000, 'img': 'Images/car4.jpeg'},
+  {  'title':'Jaguar','about':'hehehe','price':50000, 'img': 'Images/car5.jpeg'},
+  {  'title':'Jaguar','about':'hehehe','price':50000, 'img': 'Images/car6.jpeg'},
+  
+]
+
+let container = document.querySelector('.containerCard')
+
+products.forEach((e)=>{
+  let card = document.createElement('div')
+  card.classList.add('card')
+
+  card.innerHTML=`
+
+   <div class="cardImage">
+      <img src="${e.img}" alt="${e.title}">
+    </div>
+    <div class="cardContent">
+      <h3 class="cardTitle">${e.title}</h3>
+      <p class="cardDescription">${e.about}</p>
+    </div>
+    <div class="cardPrice">
+      $${e.price}
+    </div>
+  
+  `
+  container.appendChild(card)
+})
+
+})
