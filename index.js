@@ -91,3 +91,17 @@ window.addEventListener('DOMContentLoaded', () => {
     container.appendChild(card);
   });
 });
+
+
+// sidebar categories
+function showContent(carType) {
+  // Hide all sections
+  const sections = document.querySelectorAll('.section');
+  sections.forEach(section => {
+      section.classList.remove('active');
+  });
+  
+  // Show the selected section
+  const selectedSection = document.getElementById(carType);
+  selectedSection.classList.add('active');
+}
