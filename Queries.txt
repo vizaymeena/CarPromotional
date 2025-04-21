@@ -2,3 +2,6 @@
 2. cloneNode(True) : copies element and its childer too        // Deep copy
 3. .appendChild(object.assign())
 4. removeAttribute()
+
+
+Or don’t let the text expand at all on hover — just show tooltip or use a modal/pop-up for full text.
