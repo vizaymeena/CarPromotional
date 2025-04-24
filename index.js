@@ -105,3 +105,69 @@ function showContent(carType) {
   const selectedSection = document.getElementById(carType);
   selectedSection.classList.add('active');
 }
+
+// right appear category
+
+window.addEventListener('DOMContentLoaded',()=>{
+  
+  const cars = [
+    // Suvs
+    { name: "Mahindra Thar", model: 2020, price: "14lac", image: "./Images/cat/catsuv1.jpg", category: "SUVs" },
+    { name: "Mahindra Thar", model: 2020, price: "14lac", image: "./Images/cat/catsuv2.jpg", category: "SUVs" },
+    { name: "Mahindra Thar", model: 2020, price: "14lac", image: "./Images/cat/catsuv3.jpg", category: "SUVs" },
+    { name: "Mahindra Thar", model: 2020, price: "14lac", image: "./Images/cat/catsuv4.jpg", category: "SUVs" },
+    { name: "Mahindra Thar", model: 2020, price: "14lac", image: "./Images/cat/catsuv5.jpg", category: "SUVs" },
+    { name: "Mahindra Thar", model: 2020, price: "14lac", image: "./Images/cat/catsuv6.jpg", category: "SUVs" },
+    { name: "Mahindra Thar", model: 2020, price: "14lac", image: "./Images/cat/catsuv7.jpg", category: "SUVs" },
+    { name: "Mahindra Thar", model: 2020, price: "14lac", image: "./Images/cat/catsuv8.jpg", category: "SUVs" },
+    { name: "Mahindra Thar", model: 2020, price: "14lac", image: "./Images/cat/catsuv9.jpg", category: "SUVs" },
+
+    // Sedan
+    { name: "Hyundai Verna", model: 2022, price: "10lac", image: "./Images/cat/catsedan1.jpg", category: "Sedan" },
+    { name: "Hyundai Verna", model: 2022, price: "10lac", image: "./Images/cat/catsedan2.jpg", category: "Sedan" },
+    { name: "Hyundai Verna", model: 2022, price: "10lac", image: "./Images/cat/catsedan3.jpg", category: "Sedan" },
+    { name: "Hyundai Verna", model: 2022, price: "10lac", image: "./Images/cat/catsedan4.jpg", category: "Sedan" },
+    { name: "Hyundai Verna", model: 2022, price: "10lac", image: "./Images/cat/catsedan5.jpg", category: "Sedan" },
+    { name: "Hyundai Verna", model: 2022, price: "10lac", image: "./Images/cat/catsedan6.jpg", category: "Sedan" },
+
+    // coupe and xuv
+    { name: "BMW M4", model: 2021, price: "80lac", image: "./Images/cat/catcoupe1.jpg", category: "Coupe" },
+    { name: "XUV700", model: 2024, price: "19lac", image: "./Images/cat/catxuv1.jpg", category: "XUVs" },
+  ];
+
+  const categoryList = document.getElementById("categoryList");
+  const cardContainer = document.getElementById("cardContainer");
+
+  function renderCards(filter) {
+    cardContainer.innerHTML = ""; // Clear previous cards
+
+    const filtered = filter === "All" ? cars : cars.filter(car => car.category === filter);
+
+    filtered.forEach(car => {
+      const card = document.createElement("div");
+      card.className = "cCard";
+      card.innerHTML = `
+        <div>
+          <img src="${car.image}" alt="${car.name}">
+          <div class="cCardContent">
+            <span>${car.name}</span>
+            <span>Model: <span>${car.model}</span></span>
+            <span>Price: <span>${car.price}</span></span>
+          </div>
+        </div>`;
+      cardContainer.appendChild(card);
+    });
+  }
+
+  categoryList.addEventListener("click", (e) => {
+    if (e.target.tagName === "LI") {
+      const selectedCategory = e.target.getAttribute("data-category");
+      renderCards(selectedCategory);
+    }
+  });
+
+  // Initial render
+  renderCards("All");
+
+
+})
