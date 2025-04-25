@@ -95,22 +95,21 @@ window.addEventListener('DOMContentLoaded', () => {
 
 // sidebar categories
 function showContent(carType) {
-  // Hide all sections
-  const sections = document.querySelectorAll('.section');
+  
+  let sections = document.querySelectorAll('.section');
   sections.forEach(section => {
       section.classList.remove('active');
   });
   
-  // Show the selected section
-  const selectedSection = document.getElementById(carType);
+  
+  let selectedSection = document.getElementById(carType);
   selectedSection.classList.add('active');
 }
 
 // right appear category
-
 window.addEventListener('DOMContentLoaded',()=>{
   
-  const cars = [
+  let cars = [
     // Suvs
     { name: "Mahindra Thar", model: 2020, price: "14lac", image: "./Images/cat/catsuv1.jpg", category: "SUVs" },
     { name: "Mahindra Thar", model: 2020, price: "14lac", image: "./Images/cat/catsuv2.jpg", category: "SUVs" },
@@ -135,16 +134,15 @@ window.addEventListener('DOMContentLoaded',()=>{
     { name: "XUV700", model: 2024, price: "19lac", image: "./Images/cat/catxuv1.jpg", category: "XUVs" },
   ];
 
-  const categoryList = document.getElementById("categoryList");
-  const cardContainer = document.getElementById("cardContainer");
+  let categoryList = document.getElementById("categoryList");
+  let cardContainer = document.getElementById("cardContainer");
 
   function renderCards(filter) {
-    cardContainer.innerHTML = ""; // Clear previous cards
-
-    const filtered = filter === "All" ? cars : cars.filter(car => car.category === filter);
+    cardContainer.innerHTML = ""; 
+    let filtered = filter === "All" ? cars : cars.filter(car => car.category === filter);
 
     filtered.forEach(car => {
-      const card = document.createElement("div");
+      let card = document.createElement("div");
       card.className = "cCard";
       card.innerHTML = `
         <div>
