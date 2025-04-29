@@ -75,6 +75,35 @@
 .anchors:hover::after {
  width: 100%;
 }
+
+.wallpaper{
+  height: 90vh;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+.wallpaper img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  position: absolute;
+  z-index: -1;
+}
+.wallpaper h1{
+  color: white;
+}
+.walltitle{
+  position: absolute;
+  z-index: -1;
+  top: 20%;
+  left: 35%;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+  background-color: #e1875d;
+  padding: 5px 10px;
+  border-radius: 10px 10px 10px 10px;
+}
+
   /* Cards  */
 .containerCard {
   display: flex;

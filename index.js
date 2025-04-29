@@ -48,22 +48,22 @@ window.addEventListener('DOMContentLoaded', () => {
 
 window.addEventListener('DOMContentLoaded', () => {
   const products = [
-     { title: 'Jaguar F-Type R', about: "Roars like a beast, hugs corners like your ex never could. Pure adrenaline on wheels.", price: 50000, img: "Images/car2.webp"
+     { title: 'Jaguar F-Type R', about: "Roars like a beast, hugs corners like your ex never could. Pure adrenaline on wheels.", price: 1+'cr', img: "Images/car2.webp"
      },
 
-     {title: 'Jaguar XJ',about: "Feels like sitting in a five-star hotel... if that hotel could hit 155 mph.",price: 50000,img: "Images/car3.webp"
+     {title: 'Jaguar XJ',about: "Feels like sitting in a five-star hotel... if that hotel could hit 155 mph.",price: 2+'cr',img: "Images/car3.webp"
      },
 
-     {title: 'Jaguar I-Pace',about: "Electric, sleek, and faster than your morning coffee hit. The future is growling.",price: 50000,img: "Images/car7.webp"
+     {title: 'Jaguar I-Pace',about: "Electric, sleek, and faster than your morning coffee hit. The future is growling.",price: 3+'cr',img: "Images/car7.webp"
      },
 
-     {title: 'Jaguar XF',about: "Classy enough for business, crazy enough for backroads. A suit with sneakers.",price: 50000,img: 'Images/car4.jpeg'
+     {title: 'Jaguar XF',about: "Classy enough for business, crazy enough for backroads. A suit with sneakers.",price: 1.9+'cr',img: 'Images/car4.jpeg'
      },
 
-     {title: 'Jaguar E-Type (Classic)',about: "James Bond didn't drive this—but he should've. Timeless curves and vintage speed.",price: 50000,img: 'Images/car5.jpeg'
+     {title: 'Jaguar E-Type (Classic)',about: "James Bond didn't drive this—but he should've. Timeless curves and vintage speed.",price:85+'lac',img: 'Images/car5.jpeg'
      },
 
-     {title: 'Jaguar F-Pace SVR',about: "An SUV that sounds like thunder and moves like a cheetah on caffeine.",price: 50000,img: 'Images/car6.jpeg'
+     {title: 'Jaguar F-Pace SVR',about: "An SUV that sounds like thunder and moves like a cheetah on caffeine.",price: 99+'lac',img: 'Images/car6.jpeg'
      },
   ]
 
@@ -82,7 +82,7 @@ window.addEventListener('DOMContentLoaded', () => {
         <p class="cardDescription">${e.about} <span class='readMore'> ... </span></p>
       </div>
       <div class="cardPrice">
-        $${e.price}
+        ${e.price}
       </div>
     `;
 
