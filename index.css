@@ -23,6 +23,13 @@
  z-index: 1;
  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
 }
+.navDiv{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+
+}
   
   /* Navbar Title */
 .title {
