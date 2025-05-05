@@ -399,3 +399,10 @@
 .invbutton:hover {
   background-color: #080d76;
 }
+
+
+/* Slider */
+.SwiperContainer{
+  width: 50%;
+  margin: 0 auto;
+}

@@ -10,6 +10,9 @@
     <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@11/swiper-bundle.min.css" />
+
 </head>
 <body>
 
@@ -56,14 +59,26 @@
     </div>
    </section>
 
-   <section>
-    <div class="slider"></div>
-   </section>
-
+   <!-- Slider -->
+   <div class="swiper SwiperContainer">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img height="400px" width="400px" src="./Images/slide1.webp" alt=""></div>
+      <div class="swiper-slide"><img height="400px" width="400px" src="./Images/slide2.avif" alt=""></div>
+      <div class="swiper-slide"><img height="400px" width="400px" src="./Images/slide3.avif" alt=""></div>
+      <!-- Add more slides as needed -->
+    </div>
+    <!-- Optional navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+    <!-- Optional pagination -->
+    <div class="swiper-pagination"></div>
+  </div>
+  
     
 
 
+<script src="https://unpkg.com/swiper@11/swiper-bundle.min.js"></script>
 
-    <script src="index.js"></script>
+<script src="index.js"></script>
 </body>
 </html>
