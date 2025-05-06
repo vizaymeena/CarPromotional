@@ -1,46 +1,4 @@
 
-/* 1. navbar starts */
-
-window.addEventListener('DOMContentLoaded', () => {
- // Create navbar structure
- const nav = document.createElement('nav');
- const div = document.createElement('div');
- const ul = document.createElement('ul');
-
- nav.classList.add('nav');
- div.classList.add('navDiv');
-
- // Title
- const title = document.createElement('h1');
- title.textContent = 'Road Fury';
- title.classList.add('title');
- div.appendChild(title);
-
- // Navigation links
- ['Home', 'Cars', 'About', 'Help', 'Register', 'Login'].forEach(text => {
-   const li = document.createElement('li');
-   li.style.listStyleType='none'
-   ul.classList.add('navLinks');
-
-   const a = document.createElement('a');
-   a.textContent = text;
-   a.href = '#';
-   a.classList.add('anchors');
-
-   li.appendChild(a);
-   ul.appendChild(li);
- });
-
- div.appendChild(ul);
- nav.appendChild(div);
- 
-
-  // prepand means appending child to the top most of the body before any elements
-  document.body.prepend(nav)
-})
-
-// navbar ends
-
 
 /* 2. flex section starts*/
 
