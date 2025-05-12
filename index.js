@@ -10,29 +10,44 @@ window.addEventListener('DOMContentLoaded', () => {
 	catch (error) {
 		console.error("error accured at toggle arrow button", error)
 	}
-})
-var swiper = new Swiper(".coverflow_container", {
-  effect: "coverflow",
-  grabCursor: true,
-  centeredSlides: true,
-  initialSlide: 2,
-  speed: 600,
-  preventClicks: true,
-  slidesPerView: "auto",
-  coverflowEffect: {
-    rotate: 0,
-    stretch: 80,
-    depth: 350,
-    modifier: 1,
-    slideShadows: true,
-  },
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  on: {
-    click(event) {
-      swiper.slideTo(this.clickedIndex);
+}
+)
+
+// Grid
+ const cars = [
+    {
+      name: "Kia Seltos",
+      image: "./Images/kia/kia_htk.avif",
     },
-  },
-});
+    {
+      name: "Kia Cyrus",
+      image: "./Images/kia/kia_hte.avif",
+    },
+    {
+      name: "Kia Carnival",
+      image: "./Images/kia/kia_htk(o).jpg",
+    },
+    {
+      name:"Kia Sonet",
+      image:"./Images/kia/kia-sonet.jpg",
+    },
+    {
+      name:"Kia EV6",
+      image:"./Images/kia/kiaev6.jpg",
+    }
+  ];
+
+  let carGrid = document.getElementById("carGrid");
+
+  cars.forEach((car) => {
+    let card = document.createElement("div");
+    card.className = "car-card";
+
+    card.innerHTML = `
+      <img src="${car.image}" alt="${car.name}" />
+      <h4>${car.name}</h4>
+      <p>See specification</p>
+    `;
+
+    carGrid.appendChild(card);
+  });
