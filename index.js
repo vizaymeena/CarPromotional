@@ -42,6 +42,7 @@ window.addEventListener('DOMContentLoaded', () => {
   cars.forEach((car) => {
     let card = document.createElement("div");
     card.className = "car-card";
+    card.classList.add('.car-card')
 
     card.innerHTML = `
       <img src="${car.image}" alt="${car.name}" />
