@@ -1,333 +1,67 @@
-
-*{
- margin: 0;
- padding: 0;
- box-sizing: border-box;
- scroll-behavior: smooth;
- /* overflow-x: hidden */
-}
-html,body{
-  overflow-x: hidden;
-}
-/* Google font */
- @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Charm:wght@400;700&family=Combo&family=Crafty+Girls&family=Festive&family=Gruppo&family=Karla:ital,wght@0,200..800;1,200..800&family=Merienda:wght@300..900&family=Monsieur+La+Doulaise&family=Nothing+You+Could+Do&family=Parisienne&family=Plaster&family=Playwrite+VN:wght@100..400&family=Radley:ital@0;1&family=Tangerine:wght@400;700&family=Tektur:wght@400..900&display=swap');
- 
-
-.wallpaper{
-  height: 100vh;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  justify-content: space-between;
-  position: relative;
-  z-index: 1;
-}
-.wallpaper .wallimg {
-  height: 100vh;
-  width: 100%;
-  object-fit: cover;
-  background-position: center;
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  left: 0;
-}
-.arrow_left{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  right: 20px ;
-  bottom: 8em;
-  z-index: -1;
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-  background-color: #000000;
-
-  transition: all 0.3s ease-in;
-
-}
-.larrow{
-  font-size: 25px;
-  color: rgb(255, 255, 255);
-  transition: color
-  0.3s ease;
-  border: 1px solid white;
-  padding: 10px;
-  cursor: pointer;
-  border-radius: 50%;
-  
-}
-.arrow_left:hover{
-  transform: scale(1.05) translateX(-4px);
-}
-/* navbar design starts */
-.nav{
-  margin: 0 auto;
-  width: 30%;
-  height: 10vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 3em;
-}
-.nav a{
-  text-decoration: none;
-  color: rgba(255, 255, 255, 0.285);
-  letter-spacing: 2px;
-  /* font styles */
-  font-size: 16px;
-  font-family: "Montserrat Alternates", sans-serif;
-  font-weight: 100;
-  transition: color 0.3s ease, box-shadow 0.3s ease-in;
-}
-.nav a:hover{
-  box-sizing: border-box;
-  color: rgba(255, 255, 255, 0.815);
-  box-shadow: 0px 2px 0.2px 0.1px white;
-  
-}
-
-/* stringer models desgin starts */
-.kia_stringer_models{
-
-  display: flex; 
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  width: 80%;
-  padding-bottom: 40px;
-}
-.kia_stringer_models.show{
-  animation: show 1s ease forwards;
-}
-
-@keyframes show{
-  from{
-    opacity: 0;
-  }
-  to{
-    opacity: 1;
-  }
-}
-
-.stringer_item_card {
-  flex: 1 4;
-  border: 1px solid white;
-  transition: flex 0.5s ease-in-out;
-  position: relative;
-  overflow: hidden;
-  cursor: pointer;
-  padding: 10px;
-}
-
-.stringer_item_card:hover {
-  flex: 2;
-}
-
-.stringer_item_card img {
-  width: 100%;
-  height: 200px;
- object-fit: cover;
- border-radius: 10px;
-}
-/* car grid categories */
-  .car-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
-    padding: 20px;
-  }
-
-  .car-card {
-    background: #fff;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    padding: 10px;
-    transition: transform 0.5s ease-in;
-    cursor: pointer;
-  }
-
-  .car-card img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-  }
-
-  .car-card h4 {
-    margin: 10px 0 5px;
-  }
-
-  .car-card p {
-    color: #007bff;
-    cursor: pointer;
-    margin-bottom: 0;
-  }
-  .car-card:hover{
-    transform: translateY('-5px');
-  }
-
-/* Kia Brand Image */
-.kiadealers {
-  position: relative;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  height: 100vh;
-}
-
-.kiadealers img {
-  height: 650px;
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  overflow-x: hidden;
-  min-height: 300px;
-  min-width: 100%;
-  width: 100%;
-  object-fit: cover;
-}
-
-.button_explore {
-  position: absolute;
-  z-index: 2; 
-  top: 40%;
-  left: 5%;
-  color: rgb(0, 0, 0);
-  height: 50px;
-  width: 150px;
-  border: 2px solid black;
-  background-color: rgba(213, 213, 213, 0.489);
-  font-weight: 600;
-  border-radius: 10px;
-  letter-spacing: 2px;
-  transition: background 0.3s ease,color 0.3s ease,border 0.2s ease;
-  cursor: pointer;
-}
-.button_explore:hover{
-  background-color: black;
-  color: white;
-  border: 2px solid white;
-}
-
-/* Kia basic section */
-
-.basic{
-  width: 100%;
-  height: 50vh;
-  background: black;
-  border: 1px solid white;
-  box-sizing: border-box;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.subbasic{
-  height: 300px;
-  width: 33%;
-  position: relative;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  border: 2px solid gray;
-  margin: 0 2px;
-
-}
-.subbasic img{
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  height: 80%;
-  width: 100%;
-}
-.subbasic div{
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  height: 60px;
-  width: 100%;
-  background-color: white;
-  z-index: -1;
-}
-.subbasic div span{
-
-  margin: 10px 5px;
-}
-
-.footer {
-  background-color: #111;
-  color: #eee;
-  padding: 40px 20px 20px;
-  font-family: 'Segoe UI', sans-serif;
-}
-
-.footer-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  max-width: 1200px;
-  margin: auto;
-}
-
-.footer-container > div {
-  flex: 1 1 200px;
-  margin: 15px;
-}
-
-.footer h2, .footer h3 {
-  color: #fff;
-  margin-bottom: 10px;
-}
-
-.footer p, .footer a {
-  color: #ccc;
-  font-size: 14px;
-  text-decoration: none;
-}
-
-.footer a:hover {
-  color: #f00; /* red highlight on hover */
-}
-
-.footer-links ul {
-  list-style: none;
+/* Reset */
+* {
+  margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
-.footer-links li {
-  margin-bottom: 8px;
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Navbar Styles */
+.lux-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 2em;
+  background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  font-family: 'Roboto', sans-serif;
 }
 
-.social-icons a {
-  display: inline-block;
-  margin-right: 10px;
+/* Logo */
+.logo {
+  font-size: 1.8em;
+  font-weight: 700;
+  color: #f7c873;
+  letter-spacing: 2px;
 }
 
-.social-icons img {
-  width: 24px;
-  height: 24px;
-  filter: grayscale(1) brightness(1.5);
-  transition: 0.3s;
+/* Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2em;
 }
 
-.social-icons img:hover {
-  filter: grayscale(0);
-  transform: scale(1.1);
+.nav-links li a {
+  text-decoration: none;
+  color: #f0f0f0;
+  font-size: 1.1em;
+  position: relative;
+  transition: color 0.3s ease;
 }
 
-.footer-bottom {
-  text-align: center;
-  border-top: 1px solid #444;
-  margin-top: 30px;
-  padding-top: 15px;
-  font-size: 13px;
-  color: #888;
+/* Elegant Gold Hover Effect */
+.nav-links li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #f7c873, #e8b247);
+  transition: width 0.3s ease-in-out;
+  border-radius: 2px;
+}
+
+.nav-links li a:hover {
+  color: #f7c873;
+}
+
+.nav-links li a:hover::after {
+  width: 100%;
 }
